@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
@@ -6,11 +6,13 @@ mongoose.Promise = global.Promise;
 
 const SmsSchema = new Schema ({
   sender: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Contact',
   },
 
   receiver: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Contact',
   },
 
   message: {

@@ -1,7 +1,9 @@
-import express from 'express'
+import express from 'express';
 import bodyParser from 'body-parser';
 
 const app = express();
+
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
