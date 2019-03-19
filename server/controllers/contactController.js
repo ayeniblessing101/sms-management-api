@@ -37,7 +37,7 @@ exports.createContact = (req, res) => {
     }
 };
 
-exports.getAContacts = (req, res) => {
+exports.getAContact = (req, res) => {
     Contact.findById(req.params._id)
         .then((response) => {
             if (response) {
