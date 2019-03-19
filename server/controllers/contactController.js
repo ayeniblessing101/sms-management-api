@@ -13,7 +13,7 @@ exports.createContact = (req, res) => {
     if (requestErrors) {
         res.status(400).json({ errors: requestErrors });
     } else {
-        Contact.findOne({ name: req.body.phonenumber })
+        Contact.findOne({ phonenumber: req.body.phonenumber })
             .then((existingPhoneNumber) => {
                 if (existingPhoneNumber) {
                     return res.status(409).json({
