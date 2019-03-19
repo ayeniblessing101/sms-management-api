@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import Sms from './Sms';
 
 const { Schema } = mongoose;
 
@@ -18,6 +19,12 @@ const ContactSchema = new Schema ({
   },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
-})
+});
+
+ContactSchema.pre('remove', function(next) {
+  Sms.remove({ sender: this._id }).exec();
+  Sms.remove({ receiver: this._id }).exec();
+  next();
+});
 
 export default mongoose.model('Contact', ContactSchema);

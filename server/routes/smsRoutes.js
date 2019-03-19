@@ -5,7 +5,7 @@ const smsRoutes = express.Router();
 
 smsRoutes.post('/send', smsController.createMessage);
 smsRoutes.get('/messages', smsController.getAllMessages);
-// smsRoutes.get('/contact/message/', smsController.getMessagesSentToAUser);
-s// msRoutes.get('/contact/message/', smsController.getMessagesSentByAUser);
+smsRoutes.get('/contact/:_id/message/sent', smsController.getAllMessagesSentByAContact);
+smsRoutes.get('/contact/:_id/message/received', smsController.getAllMessagesSentToAContact);
 
 export default smsRoutes;
