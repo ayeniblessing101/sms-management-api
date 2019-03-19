@@ -1,9 +1,9 @@
 # SMS Management API
 
 
-## introduction
+## Introduction
 
-* **`Random Number Generator`** Random Number Generator is a simple application that allows users phone numbers randomly.
+* **`SMS Management API`** Allow you manage your contact and send messages.
 * It has the following features;
   * A user can create a contact
   * All sms sent by a Contact are linked to them
