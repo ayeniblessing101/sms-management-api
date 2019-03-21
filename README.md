@@ -10,8 +10,8 @@
   * All sms sent to a Contact are linked to them
   * Deleting a contact removes the messages they sent and references to messages they received.
 
-* A demo of the app can be accessed on heroku via [here](https://blessing-sms.herokuapp.com)
-* API Documentation can be found [here](https://blessing-sms.herokuapp.com) 
+* A demo of the app can be accessed on heroku via [here](https://blessing-sms.herokuapp.com/api/v1/contacts)
+* API Documentation can be found [here](https://documenter.getpostman.com/view/3109377/S17ru7ua) 
 
 ## Technology
 This application was developed with JavaScript using NodeJs, and Express.
